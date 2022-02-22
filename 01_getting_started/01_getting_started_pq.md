@@ -8,7 +8,7 @@ backgroundColor: #fff
 
 ---
 
-![bg left:50% 60%](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png)
+![bg left:50% 60%](./figures/python_logo.png)
 
 # **Python Programming**
 ## 01. Getting Started
@@ -21,7 +21,6 @@ Evan Chang
 
 * ~~NCTU~~ NYCU Computer Science Ph.D. Student
 * Data Science / ML / DL
-  * [Cardio Tool](http://cardiotool.miplab.org)
 * Python / C / C++ / Java
 * toosyou.tw@gmail.com
 
@@ -29,7 +28,7 @@ Evan Chang
 
 # What's Python
 
-![bg left:30%](https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Guido_van_Rossum_OSCON_2006_cropped.png/400px-Guido_van_Rossum_OSCON_2006_cropped.png)
+![bg left:30%](./figures/Guido_van_Rossum.png)
 
 <- **Guido van Rossum** created it in _1989_.
 
@@ -40,7 +39,7 @@ Evan Chang
 
 # What's Python
 
-![bg left:30% blur grayscale](https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Guido_van_Rossum_OSCON_2006_cropped.png/400px-Guido_van_Rossum_OSCON_2006_cropped.png)
+![bg left:30% blur grayscale](./figures/Guido_van_Rossum.png)
 
 * **Beautiful** is better than ugly.
 * **Explicit** is better than implicit.
@@ -52,15 +51,15 @@ Evan Chang
 
 # What's Python
 
-![bg left:30% blur grayscale](https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Guido_van_Rossum_OSCON_2006_cropped.png/400px-Guido_van_Rossum_OSCON_2006_cropped.png)
+![bg left:30% blur grayscale](./figures/Guido_van_Rossum.png)
 
-![w:750](https://miro.medium.com/max/603/1*oUPhgu1G22fxhl8L6g3YCg.png)
+![w:750](./figures/python_arch.png)
 
 --- 
 
 # What's Python
 
-![bg left:30% blur grayscale](https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Guido_van_Rossum_OSCON_2006_cropped.png/400px-Guido_van_Rossum_OSCON_2006_cropped.png)
+![bg left:30% blur grayscale](./figures/Guido_van_Rossum.pngg)
 
 * Interpreted Language 直譯語言
   * No **Compile** required.
@@ -72,7 +71,7 @@ Evan Chang
 
 # What's Python
 
-![bg left:30% blur grayscale](https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Guido_van_Rossum_OSCON_2006_cropped.png/400px-Guido_van_Rossum_OSCON_2006_cropped.png)
+![bg left:30% blur grayscale](./figures/Guido_van_Rossum.png)
 
 * Easy to learn.
 * Faster to develop.
@@ -101,9 +100,9 @@ Evan Chang
 
 # Scoring
 
-* 6 HWs, one for each class (20:00 - 21:00).
+* 6 HWs, one for each class.
   * 4 - 5 questions each.
-  * you could hand it in the next week.
+  * Upload the source codes to [NYCU E3](https://e3.nycu.edu.tw/).
   * TA will help.
 
 * Team match
@@ -113,28 +112,28 @@ Evan Chang
 
 ---
 
-![bg right:90% fit](https://www.python.org/static/community_logos/python-logo-inkscape.svg)
+![bg right:90% fit](./figures/python_logo_large.svg)
 
 ---
 
 # Installation
 
-![bg 80% opacity:.2](http://ijstokes-public.s3.amazonaws.com/dspyr/img/AnacondaCIO_Logo)
+![bg 80% opacity:.2](./figures/AnacondaCIO_Logo.png)
 
 * **Anaconda**
   * Your data science toolkit
   * https://www.anaconda.com/products/individual
-    * Python 3.8, 64-Bit Graphical Installer (4xx MB)
-    * ![w:50](https://cdn.icon-icons.com/icons2/1508/PNG/512/windows_104558.png) > `Anaconda3 (64-bit)` > ![w:50](https://img-blog.csdnimg.cn/20190601140812391.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzOTQ0MA==,size_16,color_FFFFFF,t_70)`Anaconda Navigator`
-    * ![w:70](https://upload.wikimedia.org/wikipedia/commons/7/7e/Spyder_logo.svg)`Spyder`
+    * Python 3.9, 64-Bit Graphical Installer (4xx MB)
+    * ![w:50](./figures/windows10_logo.png) > `Anaconda3 (64-bit)` > ![w:50](./figures/anaconda_logo.png)`Anaconda Navigator`
+    * ![w:70](./figures/Spyder_logo.svg)`Spyder`
 
 ---
 
-![bg 90%](https://www.anaconda.com/imager/assetsdo/Products/Product-Screenshots/5736/navigator-screenshot_680db6b6f11f9cc710dd7defae241cd3.png)
+![bg 90%](./figures/anaconda_navigator.png)
 
 ---
 
-![bg 90%](https://upload.wikimedia.org/wikipedia/commons/1/1b/Spyder-windows-screenshot.png?download)
+![bg 90%](./figures/spyder.png)
 
 ---
 
@@ -145,16 +144,16 @@ Evan Chang
     * 整合開發環境
   * Where to edit and run codes
 
-![bg 90% grayscale opacity:.2](https://upload.wikimedia.org/wikipedia/commons/1/1b/Spyder-windows-screenshot.png?download)
+![bg 90% grayscale opacity:.2](./figures/spyder.png)
 
 ---
 
 # Hello, World!
 
-1. ![w:30](https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/000/288/original/file-empty.png) New File
+1. ![w:30](./figures/empty_file.png) New File
 2. `print('Hello, World!')`
 3. Ctrl+s to save the program (you could name it `hello_world.py`)
-4. Run ![w:35](https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Actions-arrow-right-icon.png)
+4. Run ![w:35](./figures/run_button.png)
 5. See the output in the bottom right panel!
 6. ~~Now you know python~~
 
@@ -399,75 +398,92 @@ continue	global	pass
 ---
 
 <!-- _class: lead -->
+
 # Exercises
-# :hamster:天竺鼠車車:hamster: PUInt PUInt
+# 北投香腸人
 
-![bg opacity:.2](https://p2.bahamut.com.tw/B/2KU/06/ab809378e0d5116c0b861c30c31b3di5.JPG)
-
----
-
-# 1. 借過:ambulance:借過:ambulance:
-
-![bg opacity:.3](https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/01/21/1/11291372.jpg&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600&w=930&nt=1)
-
-* 車車在高速公路上塞車了，所以他想要跟大家說聲「借過」
-* 打開 ![w:70](https://upload.wikimedia.org/wikipedia/commons/7/7e/Spyder_logo.svg) `Spyder`，使用 `print` 印出 `借過🚑借過🚑`
-  * 中文跟 🚑 會壞掉的話可以用英文
+![bg opacity:.4](./exercises/2022/figures/roger.png)
 
 ---
 
-# 2. 站住:raised_hand:站住:raised_hand:
+# 北投香腸人
 
-![bg opacity:.3](https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/01/16/1/11213288.jfif&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600&w=930&nt=1)
+偉大的北投香腸人曾經留下十字箴言，
 
-* 警察車車目睹了一場銀行搶案，快叫前面的兩個壞人站住:raised_hand:
-1. 使用 `input` 讓警察輸入壞人一號的名字，存入變數 `badguy1`
-2. 使用 `input` 讓警察輸入壞人二號的名字，存入變數 `badguy2`
-3. 使用 `print` 印出 `{badguy1}站住✋ {badguy2}站住✋`
-   * e.g. `Gura站住✋ Ame站住✋`
+據傳只要反覆複誦這十個字，就可以抽到傳說中的狗勾肉
+
+![bg opacity:.4](./exercises/2022/figures/roger.png)
 
 ---
 
-# 3. 好熱:thermometer:好熱:thermometer:
+# 1. 亂講
 
-![bg opacity:.3](https://s.newtalk.tw/album/news/526/6007a1165fb16.jpg)
+![bg opacity:.4](./exercises/2022/figures/roger2.png)
 
-* 太陽好大好大，車車好熱:thermometer:好熱:thermometer:，車上的貓好熱:thermometer:好熱:thermometer:好熱:thermometer:
-* 但是溫度計:thermometer:上面寫的是華氏度，寫一個程式將輸入的華氏文度 $F$ 轉換成攝氏度 $C$ 印出來吧
+* 今天你覺得老師上課在亂講，所以你要印一個「亂講」
+* 打開 ![w:70](./figures/Spyder_logo.svg) `Spyder`，使用 `print` 印出 `亂講`
+  * 中文會壞掉的話可以用英文
+
+---
+
+# 2. 冷靜
+
+![bg opacity:.4](./exercises/2022/figures/roger3.png)
+
+* 因為你反駁老師，老師太激動了，
+* 請輸入老師的名字，後面要他「冷靜」
+1. 使用 `input` 輸入老師名字，存入變數 `teeechearrrr`
+2. 使用 `print` 印出 `{teeechearrrr} 冷靜`
+   * e.g. `TOZY 冷靜`
+
+---
+
+# 3. 真假
+
+![bg opacity:.4](./exercises/2022/figures/roger4.png)
+
+* 你同學跟你講溫度都用華氏，你只好回「真假」再用電腦轉成攝氏度
+* 寫一個程式將輸入的華氏溫度 $F$ 轉換成攝氏度 $C$ 印出來
   * $C = \frac{5}{9}\times (F-32)$
+```
+輸入：50
+輸出：真假 10 度喔
+```
 
 ---
 
-# 4. 垃圾🗑️垃圾 🗑️
+# 4. 有料
 
-![bg opacity:.2](https://i.ytimg.com/vi/0d4nLXIansU/maxresdefault.jpg)
+![bg opacity:.3](./exercises/2022/figures/toyz.jpg)
 
-* 天竺鼠車車在街上做大掃除，他想用最少的垃圾袋將垃圾裝完
-* 他有四種垃圾袋：50🗑️，10🗑️，5🗑️，1🗑️
-* 請輸入一個整數🗑️的垃圾量，印出最適合的裝法
+* 北投香腸人的朋友 TOZY 最近想買狗牌電動機車
+* 但他只有四種硬幣（50, 10, 5, 1）可以付款
+* 幫他用最少的硬幣付款吧
+* 請輸入一個整數的價格，印出最有料的付法
   ```
-  輸入：123
-  輸出：50🗑️ * 2
-       10🗑️ * 2
-        5🗑️ * 0
-        1🗑️ * 3
+  輸入：12699
+  輸出：50 * 253
+       10 * 4
+        5 * 1
+        1 * 4
   ```
 
 ---
 
-# 5. 披薩:pizza:披薩:pizza:
+# 5. 中計
 
-![bg opacity:.3](https://i0.zi.org.tw/ddm/2021/01/1611688399-5ada021067295a2b0609abf3172ab361.jpg)
+![bg opacity:.4](./exercises/2022/figures/taison.jpg)
 
-* 車車們在比賽誰吃的三角形披薩:pizza:比較大，你能幫車車們算面積嗎
+* 北投香腸人買了一片三角形批薩，發現面積好像怪怪的
 * 輸入三個邊長，請用海龍公式印出面積
 $$
 \triangle = \sqrt{s(s-a)(s-b)(s-c)}, s =\frac{a + b + c}{2}
 $$
 ```
 輸入：3↵ 4↵ 5↵
-輸出：🍕6🍕
+輸出：6 阿中計
 ```
+* [提示](https://www.youtube.com/watch?v=99kJnTr8rwU)
 
 ---
 
@@ -475,4 +491,3 @@ $$
 
 * Prof. Chang-Chieh Cheng. National Yang Ming Chiao Tung University, Taiwan
 * [Python for Everybody](https://www.py4e.com/)
-* [天竺鼠車車](https://www.youtube.com/watch?v=_6TtTRrno3E)
