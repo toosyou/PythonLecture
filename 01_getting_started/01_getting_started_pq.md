@@ -59,7 +59,7 @@ Evan Chang
 
 # What's Python
 
-![bg left:30% blur grayscale](./figures/Guido_van_Rossum.pngg)
+![bg left:30% blur grayscale](./figures/Guido_van_Rossum.png)
 
 * Interpreted Language 直譯語言
   * No **Compile** required.
@@ -100,13 +100,13 @@ Evan Chang
 
 # Scoring
 
-* 6 HWs, one for each class.
-  * 4 - 5 questions each.
+* 5 HWs, one for each class.
+  * 3 - 5 questions each.
   * Upload the source codes to [NYCU E3](https://e3.nycu.edu.tw/).
   * TA will help.
 
 * Team match
-  * ~30 people a team
+  * ~50 people a team
   * ~100 questions
   * Easy / Medium / Hard
 
@@ -400,90 +400,66 @@ continue	global	pass
 <!-- _class: lead -->
 
 # Exercises
-# 北投香腸人
 
-![bg opacity:.4](./exercises/2022/figures/roger.png)
-
----
-
-# 北投香腸人
-
-偉大的北投香腸人曾經留下十字箴言，
-
-據傳只要反覆複誦這十個字，就可以抽到傳說中的狗勾肉
-
-![bg opacity:.4](./exercises/2022/figures/roger.png)
+![bg opacity:.5](./exercises/2023/figures/bocchi_the_rock_20221122150140.jpg)
 
 ---
 
-# 1. 亂講
+# 1. Bocchi the maid
 
-![bg opacity:.4](./exercises/2022/figures/roger2.png)
+* 我們的好朋友波奇不小心當了女僕咖啡廳的員工，
+  請幫幫她施展讓食物變好吃的魔法吧
+* 打開 ![w:70](./figures/Spyder_logo.svg) `Spyder`，使用 `print` 印出 `萌ㄟ萌ㄟ啾`
 
-* 今天你覺得老師上課在亂講，所以你要印一個「亂講」
-* 打開 ![w:70](./figures/Spyder_logo.svg) `Spyder`，使用 `print` 印出 `亂講`
-  * 中文會壞掉的話可以用英文
-
----
-
-# 2. 冷靜
-
-![bg opacity:.4](./exercises/2022/figures/roger3.png)
-
-* 因為你反駁老師，老師太激動了，
-* 請輸入老師的名字，後面要他「冷靜」
-1. 使用 `input` 輸入老師名字，存入變數 `teeechearrrr`
-2. 使用 `print` 印出 `{teeechearrrr} 冷靜`
-   * e.g. `TOZY 冷靜`
+![bg opacity:.2](./exercises/2023/figures/bocchi_the_maid.jpg)
 
 ---
 
-# 3. 真假
+# 2. 不要再打了
 
-![bg opacity:.4](./exercises/2022/figures/roger4.png)
+* 知名拳擊手 Tozy 在近期的表演賽中，慘遭對手重擊
+* 於心不忍的你於是決定叫對手不要再打了
 
-* 你同學跟你講溫度都用華氏，你只好回「真假」再用電腦轉成攝氏度
-* 寫一個程式將輸入的華氏溫度 $F$ 轉換成攝氏度 $C$ 印出來
-  * $C = \frac{5}{9}\times (F-32)$
+1. 使用 `input` 輸入對手名字，存入變數 `muscular_man`
+2. 使用 `print` 印出 `{muscular_man} 不要再打了`
+   * e.g. `肌肉棒子 不要再打了`
+
+![bg opacity:.2](./exercises/2023/figures/toyz_fight.jpg)
+
+---
+
+# 3. 性別市場的最後 winnner
+
+* 為了成為性別市場的最後 winner
+* 你花了 10150 元買了一瓶潘海利根的香水
+* 但你只有四種硬幣（50, 10, 5, 1）可以付錢
+* 請寫一個程式幫你找出某金額最少要付幾個硬幣吧
 ```
-輸入：50
-輸出：真假 10 度喔
+輸入：10150
+輸出： 50 * 203
+      10 * 0
+       5 * 0
+       1 * 0
 ```
 
----
-
-# 4. 有料
-
-![bg opacity:.3](./exercises/2022/figures/toyz.jpg)
-
-* 北投香腸人的朋友 TOZY 最近想買狗牌電動機車
-* 但他只有四種硬幣（50, 10, 5, 1）可以付款
-* 幫他用最少的硬幣付款吧
-* 請輸入一個整數的價格，印出最有料的付法
-  ```
-  輸入：12699
-  輸出：50 * 253
-       10 * 4
-        5 * 1
-        1 * 4
-  ```
+![bg opacity:.2](./exercises/2023/figures/final_winner.jpg) 
 
 ---
 
-# 5. 中計
+# 4. 新的壽司口味
 
-![bg opacity:.4](./exercises/2022/figures/taison.jpg)
-
-* 北投香腸人買了一片三角形批薩，發現面積好像怪怪的
-* 輸入三個邊長，請用海龍公式印出面積
+* 最近連鎖壽司店推出的新壽司口味：「唾液」
+* 但你實在不喜歡，因此你決定改吃三角御飯糰
+* 寫一個程式使用飯糰的三個邊長，計算出三角形御飯糰的面積吧
 $$
 \triangle = \sqrt{s(s-a)(s-b)(s-c)}, s =\frac{a + b + c}{2}
 $$
 ```
-輸入：3↵ 4↵ 5↵
-輸出：6 阿中計
+輸入：3↵ 4↵ 5↵
+輸出：6
 ```
-* [提示](https://www.youtube.com/watch?v=99kJnTr8rwU)
+
+![bg opacity:.25](./exercises/2023/figures/sushi.jpg)
 
 ---
 
