@@ -8,7 +8,7 @@ backgroundColor: #fff
 
 ---
 
-![bg left:50% 60%](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png)
+![bg left:50% 60%](../01_getting_started/figures/python_logo.png)
 
 # **Python Programming**
 ## 02. Conditional Statements
@@ -19,7 +19,7 @@ Evan Chang
 
 # Conditional Statements?
 
-![bg right:40%](https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/16426270_1850797695203024_3694001626865080011_n.jpg?_nc_cat=105&ccb=3&_nc_sid=730e14&_nc_ohc=0OYME0s2i54AX8MqgRF&_nc_ht=scontent-tpe1-1.xx&oh=48c95c9097d4ae3b5fa968301b45fdf2&oe=60600166)
+![bg right:40%](./figures/chijaji.jpg)
 
 * Bring an umbrella if it rains.
 * Fat if 起Ｏ雞
@@ -29,10 +29,10 @@ Evan Chang
 
 # Boolean Values
 
-![bg left:30%](https://upload.wikimedia.org/wikipedia/commons/6/6c/George_Boole.jpg)
+![bg left:30%](./figures/george_boole.jpg)
 
 * Only two possible values: `False` and `True`
-* Use `bool()` to convert a variable to a boolean
+* Use `bool()` to convert a variable to a boolean variable
   * `0`, `None` or empty -> `False`
   * otherwise -> `True`
   ```python
@@ -40,7 +40,7 @@ Evan Chang
   become_slim       = bool(0)           # False
   become_slim       = bool(None)        # False
   become_fat        = bool(999)         # True
-  but_it_feels_good = bool('yesyesyes') # True
+  but_it_feels_good = bool('False')     # True
   ```
 
 ---
@@ -49,67 +49,40 @@ Evan Chang
 
 * `>`, `<` Greater/Less than
 * `>=`, `<=` Greater/Less than or equal to
-* **`==` Equal to**
-* **`!=` Not equal to**
+* **`==` Equal to** & **`!=` Not equal to**
 
 ```python
 x = 1
 y = 2
 print(1 == 1)   # True
-print(1 != 2)   # False
+print(1 != 2)   # True
 print(1 >= 2)   # False
-print(x < y)    # True
-z = (x == y)    # False, does z = x == y work? why?
-```
-
----
-<!-- _class: lead -->
-
-# Pop Quiz: 
-# 什麼變數型態只有 `True` 或 `False`?
-
----
-
-# Logical Operators
-
-* `x and y`, return `True` if x and y are both `True`
-* `x or y`, return `False` if x and y are both `False`
-* `not x`, return `True` if x is `False`
-
-```python
-eat_cheogajip = True
-eat_KFC = True
-become_slim = not (eat_cheogajip or eat_KFC) # False
-
-print((eat_cheogajip or eat_KFC) and become_slim) # False
 ```
 
 ---
 
-# Logical Complements
+# Comparison Operators
 
-* `not (x and y) == (not x) or (not y)`
-* `not (x or y)  == (not x) and (not y)`
-
----
-
-# Logical Complements
-
-* Venn Diagram (文氏圖)
-    ![](https://imgur.com/9yZRfMh.jpg)
-    * [靈魂繪師](https://sketch.io/sketchpad/)
-  
----
-
-<!-- _class: lead -->
-
-# Pop Quiz: 
-#### `( (True and False) or (not (False or False)) ) and True`
-
----
+* `a < x < c` is equivalent to `a < x and x < c`
 
 ```python
-# Operator Precedence
+print(x < y)      # True
+print(3 > y > x)  # True
+print(-1 < x < 1) # False
+```
+
+* How about these two?
+
+```python
+z = (x == y)      # False
+z = x == y        # ?
+```
+
+---
+
+### Operator Precedence
+
+```python
 1. :=
 2. lambda
 3. if – else
@@ -129,6 +102,86 @@ print((eat_cheogajip or eat_KFC) and become_slim) # False
 15. x[index], x[index:index], x(arguments...), x.attribute
 16. (expressions...), [expressions...], {key: value...}, {expressions...}
 ```
+
+---
+
+# Operator Precedence
+
+* Higher precedence operators are evaluated first
+
+```python
+z = x == y           # False
+print(2 ** 3 * 5)    # 40
+```
+
+---
+<!-- _class: lead -->
+
+# Pop Quiz: 
+# 什麼變數型態只有 `True` 或 `False`?
+
+---
+
+# Logical Operators
+
+* `not x`, return `True` if x is `False`
+* `x and y`, return `True` if x and y are both `True`
+* `x or y`, return `False` if x and y are both `False`
+
+```python
+eat_cheogajip = True
+eat_KFC = True
+become_slim = not (eat_cheogajip or eat_KFC) # False
+
+print((eat_cheogajip or eat_KFC) and become_slim) # False
+```
+
+---
+
+# Logical Complements
+
+* `not (x and y) == (not x) or (not y)`
+* `not (x or y)  == (not x) and (not y)`
+
+---
+
+### Operator Precedence
+
+```python
+1. :=
+2. lambda
+3. if – else
+4. or
+5. and
+6. not x
+7. in, not in, is, is not, <, <=, >, >=, !=, ==
+8. |
+9. ^
+10. &
+11. <<, >>
+12. +, -
+13. *, @, /, //, %
+14. +x, -x, ~x
+14. **
+14. await x
+15. x[index], x[index:index], x(arguments...), x.attribute
+16. (expressions...), [expressions...], {key: value...}, {expressions...}
+```
+
+
+---
+
+# Logical Complements
+
+* Venn Diagram (文氏圖)
+    ![](./figures/venn_diagram.jpg)
+  
+---
+
+<!-- _class: lead -->
+
+# Pop Quiz: 
+#### `( (True and False) or (not (False or False)) ) and True`
 
 ---
 
@@ -326,9 +379,7 @@ else:                                         #     L -> [score >= 90?]  -> A!
 ---
 
 <!-- _class: lead -->
-# Before we continue
-![bg right:60%](https://i.imgur.com/AsngJfx.png)
-
+# [Read More](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ---
 
@@ -438,92 +489,68 @@ else:                                         #     L -> [score >= 90?]  -> A!
 
 ---
 
-# 1. 起Ｏ雞
+# 1. 蛋餅不加蛋
 
-![bg opacity:.2](https://miemie.tw/wp-content/uploads/%E9%AB%98%E9%9B%84%E8%B5%B7%E5%AE%B6%E9%9B%9E-1-1.jpg)
+![bg opacity:.3](./exercises/2023/figures/egg.webp)
 
-* 起Ｏ雞實在太好吃了，以至於阿群每次都會點太多吃不完，請寫一個程式警告阿群吧！
-  1. 請使用者輸入一個浮點數 $T$，代表阿群今天餓了幾個小時
-  2. 使用以下公式計算阿群的食量 $F$ （隻雞）
-     $$
-     F = \frac{T}{10} + \frac{1}{4}
-     $$
-  3. 讓阿群輸入一個浮點數 $C$，代表想要點的隻數
-  4. 若 $C>F$ 則印出 `你才吃不完`，反之印出 `胖`
+* 最近不流行吃蛋了，於是你決定把早餐的蛋餅都改成薯餅了
+* 寫一個程式把菜單上的蛋餅都改成薯餅吧
+  * 輸入兩個字串，將 `蛋餅` 字串改成 `薯餅` 再印出來吧
+  ```
+  輸入：培根↵ 蛋餅↵
+  輸出：培根↵ 薯餅↵
+---
+
+# 2. 貳拾茶屋
+
+![bg opacity:.3](./exercises/2023/figures/toyz.webp)
+
+* 知名飲料職人 TOZY 的店還剩下 `n` 分鐘就要打烊了
+* 而有著精湛的手藝的他，每 `k` 分鐘就可以搖出一杯珍珠鮮奶茶
+* 請輸入兩個整數 `n` 跟 `k` 計算出總共可以搖出幾杯珍珠鮮奶茶吧
 
 ---
 
-# 2. 起Ｏ雞 2
+# 3. 貳拾茶屋 2
 
-![bg opacity:.2](https://alina00.com/wp-content/uploads/2016/10/%E8%B5%B7%E5%AE%B6%E9%9B%9E.jpg)
+![bg opacity:.2](./exercises/2023/figures/toyz2.png)
 
-* 承上題，有時候阿群會輸入奇怪的東西，那就代表他餓到語無論次了，印個東西讓他醒醒腦吧！
-  * 請使用 `try` 跟 `except` 處理輸入無法被轉成浮點數的錯誤
-  * 如果無法轉成浮點數，印出下面的訊息並結束程式吧
-    ```
-    觀自在菩薩, 行深般若起Ｏ雞多時, 照見五蘊皆雞, 度一切苦厄.
-    起Ｏ雞, 起不異雞, 雞不異起, 起即是雞, 雞即是起; 受想行識, 亦復如是.
-    起Ｏ雞, 是諸法雞相: 不生不滅, 不垢不淨, 不增不減.
-    是故空中無雞, 無受想行識, 無眼耳鼻舌身意,
-    無雞聲香味觸法, 無眼界乃至無意識界,
-    無無明, 亦無無明盡; 乃至無老死, 亦無老死盡.
-    無苦集滅道, 無智亦無得.
-    ```
----
-
-# 3. 火鍋
-
-![bg opacity:.3](https://cdn.psee.io/4908f44a-0697-4ee7-b90d-5892716679dd.png)
-
-* 阿統面臨財務危機，被迫兼差打工，他決定用骰子來決定打工地點
-  1. 請阿統輸入骰出來的數字，如果該數字
-     1. 大於六或小於一，印出 `台中哪個屁孩站出來說啊！！你只是個小丑R！`
-     2. 一到六
-        1. 奇數 —— 阿統決定要去辛酸火鍋店打工，印出 `RRRRRR一代一代一代`
-        2. 偶數 —— 阿統決定要去公館擺攤，請印出下頁的決定
-   
----
-
-<!-- _class: lead -->
-
-![bg opacity:.3](https://i.ytimg.com/vi/vUvKjM73x9A/hqdefault.jpg)
-
-```
-他們是人欸😡😡那你叫警察🤬🤬來叫他們滾嘛🤭🤭他們是人😭😭
-他們是人🤔🤔你禮貌的說😳😳好我們現在大家不要擠在這邊😀😀
-那他們要不要走他們的事🙃🙃我怎麼控制他們我請問你😔😔
-他們是不是你的粉絲嘛😤😤我不知道👐👐我不知道👐👐
-我說真的不知道🙌🙌🙌不要笑👈不要笑👉不要笑👇
-```
----
-
-# 4. 肝膽香皂
-
-![bg opacity:.4](https://cdn.ready-market.com/101/9816a644//Templates/pic/soap.png?v=3b4ef92f)
-
-* 阿莎最近著迷於製作人工肥皂，但他始終搞不清楚原理
-  ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/529faff0c03a891c96bfd517c20730771f17efba)
-  * 其中 R 基有三種可能的形式：$C_{17}H_{33}$, $C_{15}H_{31}$, $C_{17}H_{35}$
-  * 讓阿莎各別輸入 $C$ 及 $H$ 的數量，並僅使用**一個** `if` 判斷是否是可用的 R 基吧
-  * :warning:注意：$C$ 及 $H$ 的量可以是 $K$ 個 R 基總和
-    
+* 來抓違建的建管處員工看到了你寫的程式
+* 調皮的他先是將 `k` 值輸入成了 `0`，又試了非數字的輸入
+* 兩次都讓你的程式壞掉了
+* 使用 `try` 跟 `except` 保護你的程式，讓兩次錯誤可以印出對應的提示吧
 
 ---
 
-# 5. 彬彬姐泡湯
+# 4. 艾爾登把你壓在地上打環
 
-![bg opacity:.15](https://s.yimg.com/ny/api/res/1.2/E8DexpEjOPp3D6cMOJ4FsA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MA--/https://s.yimg.com/os/creatr-uploaded-images/2021-02/4f4584f0-7705-11eb-997f-92146e0fd5fb)
+![bg opacity:.4](./exercises/2023/figures/elden_ring.webp)
 
-* 彬彬姐在二二八時，去由布院泡了「只有今天限定」的限時湯屋
-* 她不禁好奇今年是不是閏年，明天會不會是 2/29 呢
-  * 請彬彬姐輸入今年的西元年份 $Y$，輸出是不是閏年吧，閏年規則：
+* 你覺得最近的新遊戲「艾爾登把你壓在地上打環」太簡單了
+* 因為你發現了幾種關鍵的條件，滿足任一種即可通關：
+  1. `練習時間大於或等於 500 小時，且角色強度大於三倍boss強度`
+  2. `練習時間小於 500 小時，且遊戲沒有掉幀`
+  3. `當天氣溫高於 50 度，且降雨量大於 100 公分`
+* 輸入各項數據判斷是否可以通關吧
+
+---
+
+# 5. 停電週期
+
+![bg opacity:.4](./figures/picachu.jpg)
+
+* 最近皮卡丘常常發不出電來，而你發現了是因為閏年的關係
+* 寫個程式判斷今年年份 $Y$ 是不是閏年吧
+  * 閏年規則：
     1. $Y$ 非 $4$ 的倍數 -> 平年
     2. $Y$ 為 $4$ 的倍數，但非 $100$ 的倍數 -> 閏年
     3. $Y$ 為 $100$ 的倍數，但非 $400$ 的倍數 -> 平年
     4. $Y$ 為 $400$ 的倍數 -> 閏年
-* [提示](https://youtu.be/uoqJy_AEt-E)
+* [提示](https://www.youtube.com/watch?v=6Rm-eZ8rwYU&feature=emb_imp_woyt)
+
 
 ---
+
 
 # Acknowledgment
 
