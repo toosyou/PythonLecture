@@ -29,6 +29,11 @@ Evan Chang
 
 ---
 
+<!-- _class: lead -->
+# `list`
+
+---
+
 # `list`
 
 * A container for **ordered** objects.
@@ -65,23 +70,26 @@ print(L[1:6:2])                 # [1, 3, 5]
 
 print(L[:-3])                   # [0, 1, 2]
 print(L[3:])                    # [3, 4, 5]
-print(L[:])                     # [0, 1, 2, 3, 4, 5]
+print(L[:])                     # [0, 1, 2, 3, 4, 5], same as L
 print(L[::-1])                  # [5, 4, 3, 2, 1, 0]
+print(L[4:1:-1])                # [4, 3, 2]
 ```
 
 ---
 
-![bg opacity:.3](https://cdn.pocket-lint.com/r/s/660x/assets/images/156343-apps-news-feature-best-suez-canal-memes-image6-sb0tykntw7-jpg.webp?v1)
-
 <!-- _class: lead -->
 # Pop Quiz: 
-# 長榮的船卡了幾天？
+```python
+L = [0, 1, 2, 3, 4, 5]
+
+print(L[::2])
+```
 
 ---
 
 # Methods of `list`
 
-* `list()` or `[]` to declare a list.
+* `list()` or `[]` to declare an empty list.
 * `list.append(x)` to add `x` to the end of the list.
 * `list.extend(another_list)` to extend the list with another list.
 
@@ -116,6 +124,23 @@ L4 = ['A', 'B', 'C', 1, 'O',
 
 ---
 
+# 2D `list`
+
+* A list of lists.
+
+```python
+L = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+
+print(L[0])                 # [1, 2, 3]
+print(L[0][1])              # 2
+```
+
+* 3D `list` is also possible. List of lists of lists.
+
+---
+
 # Methods of `list`
 
 * `list.insert(i, x)` to insert `x` to index `i`
@@ -139,12 +164,24 @@ print(L, len(L))    # [] 0
 
 * What if there's nothing to remove?
   * Exception
-```python
-L = ['A', 'B', 'C']
-L.remove('D')           # ValueError: list.remove(x): x not in list
-```
+  ```python
+  L = ['A', 'B', 'C']
+  L.remove('D')           # ValueError: list.remove(x): x not in list
+  ```
 * Try it!
   * use `try/except` to append `L` with `x` if `x` is not in `L`
+
+---
+
+# Methods of `list`
+
+* `list.index(x)` to find the index of **(the first)** `x` in the list
+  ```python
+  L = ['A', 'B', 'C', 1, 2, 3, 'C']
+
+  L.index('C')          # 2
+  L.index('D')          # ValueError: 'D' is not in list
+  ```
 
 ---
 
@@ -152,12 +189,12 @@ L.remove('D')           # ValueError: list.remove(x): x not in list
 
 * `x in list` / `x not in list`
   * Check if `x` exists in the list
-```python
-FIR = ['Faye', 'REAL', 'IAN']
-if 'Lydia' not in FIR:
-    FIR.remove('Faye')
-    FIR.append('Lydia')
-```
+  ```python
+  FIR = ['Faye', 'REAL', 'IAN']
+  if 'Lydia' not in FIR:
+      FIR.remove('Faye')
+      FIR.append('Lydia')
+  ```
 
 ---
 
@@ -165,17 +202,17 @@ if 'Lydia' not in FIR:
 * `L1 is L2` / `L1 is not L2`
   * Check if `L1` and `L2` is the same object
 
-```python
-L1 = [1, 2, 3]
-L2 = [1, 2, 3]
-print(L1 is L2)       # False, why?
+  ```python
+  L1 = [1, 2, 3]
+  L2 = [1, 2, 3]
+  print(L1 is L2)       # False, why?
 
-L2 = L1
-print(L1 is L2)       # True, why?
+  L2 = L1
+  print(L1 is L2)       # True, why?
 
-L2[0] = 999
-print(L1)             # [999, 2, 3], why?
-```
+  L2[0] = 999
+  print(L1)             # [999, 2, 3], why?
+  ```
 
 ---
 
@@ -200,19 +237,19 @@ print(L1 == L2)       # True
 
 * `list.sort(key=None, reverse=False)` to sort the list
   * `key` specifies the key function
-    * Every element `x` will be seen as`key(x)` when sorting.
+    * Every element `x` will be seen as `key(x)` when sorting.
 
-```python
-L = [123, 32, 1, 1234567]
-L.sort()
-print(L)                  # [1, 32, 123, 1234567]
+  ```python
+  L = [123, 32, 1, 1234567]
+  L.sort()
+  print(L)                  # [1, 32, 123, 1234567]
 
-L.sort(reverse=True)
-print(L)                  # [1234567, 123, 32, 1]
+  L.sort(reverse=True)
+  print(L)                  # [1234567, 123, 32, 1]
 
-L.sort(key=str)
-print(L)                  # [1, 123, 1234567, 32], why?
-```
+  L.sort(key=str)
+  print(L)                  # [1, 123, 1234567, 32], why?
+  ```
 
 ---
 
@@ -227,6 +264,10 @@ L2 = L1
 L3 = L1.copy()
 
 print(L2 is L1, L3 is L1) # True False, why?
+
+L2[0] = 69
+L3[0] = 420
+print(L1)                 # [69, 2, 3], why?
 ```
 
 ---
@@ -250,50 +291,156 @@ print(L)  # []
 ---
 
 <!-- _class: lead -->
+# `tuple`
+
+---
+
+# `tuple`
+
+* A tuple is also a data container to store a set of data objects
+* Similar to `list`, using an index to access an item of a tuple
+
+```python
+t = (1, 'two', [3, 4, 5])
+print(t[0]) # 1
+print(t)    # (1, 'two', [3, 4, 5])
+
+t2 = 6, 7, 8
+t3 = t, t2, (1, ) # (1, ) is a tuple with one element
+``` 
+
+---
+
+# `tuple`
+
+* `tuple` is immutable
+  * Cannot change the value of an element
+  * Cannot add or remove elements
+  * Cannot sort or reverse
+
+```python
+t = 1, 2, 3
+t[0] = 69420 # TypeError: 'tuple' object does not support item assignment
+```
+
+---
+
+# `tuple`
+
+* A tuple/list can be distributed to several variables.
+  * The number of variables must match the number of elements in the tuple/list
+
+```python
+one, too, therr, fore, faife = 1, 2, 3, 4, 5
+print(one, too, therr, fore, faife) # 1 2 3 4 5
+```
+
+---
+
+# `enumerate`
+
+* A function to get the index and the value of an iterable object
+  * `enumerate(iterable, start=0)`
+  * `start` specifies the starting index
+
+```python
+L = ['A', 'B', 'C', 'D']
+for i, x in enumerate(L): # (i, x) is a tuple (index, value)
+    print(i, x) 
+# 0 A
+# 1 B
+# 2 C
+# 3 D
+```
+
+---
+
+# `zip`
+
+* A function to combine two or more iterables into a list of tuples
+  * `zip(iterable1, iterable2, ...)`
+  * The length of the result is the length of the shortest iterable
+
+```python
+L1 = [28, 30, 32, 34]
+L2 = ['A', 'B', 'C', 'D']
+
+for x, y in zip(L1, L2):
+    print(x, y)
+# 28 A
+# 30 B
+# 32 C
+# 34 D
+```
+
+---
+
+<!-- _class: lead -->
 # Exercises
 
 ---
 
-# 1. 學妹模擬器
+# 1. 六千
 
-* 上了大學的阿群發現學妹都不想理他
-* 於心不忍的你決定要幫他寫一個學妹模擬器
-  1. 可以不斷讓阿群**輸入訊息**跟學妹說話
-  2. 學妹每次都會隨機回 `恩恩`，`哈哈`，`是喔` ...等話
-     * 但是為了不要讓阿群發現，每次回覆不可以跟上次一樣
-  3. 等阿群說出 `我喜歡你` 告白後，學妹就會說 `哈哈學長我先去洗澡囉`，程式就結束了
+* 某島國最近要發六千塊給他們的國民，
+* 但為了維持效率，他們決定從北邊開始發，
+* 請寫一個程式輸入一些 x 座標，請依照 x 座標由小到大印出。
+```python
+輸入： 9↵ 1↵ 7↵ 4↵ 3↵ 10↵ 5↵ 6↵ 2↵ 8↵ 
+輸出： 1 2 3 4 5 6 7 8 9 10
+```
 
----
-
-# 2. DD黨
-
-![bg opacity:.3](https://img.4gamers.com.tw/ckfinder/images/ALIEN/2021-1/maxresd213efault.jpg?versionId=Kmz4sadnKzhhuFKgyTuOes3KgyKq8eCZ)
-
-* 最近阿群愛上了看 Vtuber，並成為了不折不扣的 DD 黨
-* 但是每次 Vtuber 們直播的時候，他都因為打字太慢跟不上聊天室
-* 寫個程式自動幫他產生 $20$ 份下面的留言吧：
-  ```
-  潤羽露西婭我婆！
-  兔田佩克拉我婆！
-  寶鐘瑪琳我婆！
-  噶嗚古拉我婆！
-  湊阿庫婭我婆！
-  ```
+![bg opacity:0.2](./figures/rich.jpg)
 
 ---
 
-# 3. 時間鉗形攻勢
+# 2. 緬甸的購物清單
 
-* 阿群朋友被找去打一場仗，但是有些敵人都是倒著走過來的
-* 他把他們講的話記錄了起來，發現好像都是迴文
-  * 迴文 - palindrome：翻轉後還是保持相同
-* 寫一個程式自動判斷一個 `list` 是不是迴文吧
-  ```python
-  # palindromes
-  L = [1, 2, 3, 2, 1]
-  L = [1, 2, 1]
-  L = [1]
+* 阿靜最近想去緬甸旅遊購物，
+* 請幫他寫一個購物清單系統吧！
 
-  # not palindromes
-  L = [1, 2 ,3]
-  ```
+```python
+輸入：   買↵ 包包↵
+        買↵ 鞋子↵
+      不買↵ 包包↵
+        買↵ 彩券↵
+      結束↵
+輸出：鞋子 彩券
+```
+
+![bg opacity:0.2](./figures/kk.jpg)
+
+---
+
+# 3. 傑寶模擬器
+
+![bg opacity:0.2](./figures/robot_dancing.gif)
+
+* 知名實況主 Rager 覺得最近觀眾數實在太少了
+* 因此希望你幫他寫一個機器人，讓他可以用來當作聊天室
+  1. 可以讓 Rager 不斷 **輸入訊息**
+  2. 機器人每次都會依序回 `真假`，`確實`，`冷靜`，`亂講`，`有料` ...等
+  3. 等 Rager 說出 `下播拉`，機器人就會回 `機油好難喝`，程式就結束了
+
+---
+
+# 4. エクスプロージョン
+
+* 阿惠每天只能放一次名為 エクスプロージョン 的法術
+* 為了確保每次都能命中，阿惠必須要先用內積計算他跟敵人的夾角
+* 請寫一個程式，計算兩個向量的內積吧！
+
+```python
+a = [1, 2, 3]
+b = [10, 20, 30]
+輸出： 140
+```
+
+![bg opacity:0.3](./figures/Megumin.png)
+
+---
+
+# Acknowledgment
+
+* Prof. Chang-Chieh Cheng. National Yang Ming Chiao Tung University, Taiwan
+* [Python for Everybody](https://www.py4e.com/)
